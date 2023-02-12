@@ -1,0 +1,138 @@
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo
+$ git init
+Initialized empty Git repository in D:/zemoso technologies/first_git_repo/.git/
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ vi hello_world.txt
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git add .
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+gi
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git commit -m "file is added"
+[master (root-commit) 15e3e62] file is added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git remote add origin https://github.com/shivamchaudhary-codeon/zemoso-training.git
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.38 KiB | 1.38 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shivamchaudhary-codeon/zemoso-training.git
+ * [new branch]      master -> master
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git diff
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/hello_world.txt b/hello_world.txt
+index bab22f2..dfa8879 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1 @@
+-Git development began in April 2005 after many developers of the Linux kernel gave up access to BitKeeper, a proprietary source control management system that had previously been used to maintain the project.[10] The copyright holder of BitKeeper, Larry McVoy, had withdrawn gratis use of the product after claiming that Andrew Tridgell had reverse-engineered the BitKeeper protocols. Torvalds wanted a distributed system that he could use like BitKeeper, but none of the available free systems met his needs, particularly in terms of performance. Torvalds took an example of an SCM system requiring thirty seconds to apply a patch and update all associated metadata, and noted that this would not scale to the needs of Linux kernel development, where syncing with fellow maintainers could require 250 such actions at a time. He wanted patching to take three seconds,[6] and had several other design criteria in mind: take Concurrent Versions System (CVS) as an example of what not to do; if in doubt, make the exact opposite decision[8] support a distributed, BitKeeper-like workflow[8] very strong safeguards against corruption, either accidental or malicious.[7] These three criteria eliminated every then-existing version control system, except for Monotone. Considering perf
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git add .
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git commit -m"replace to with my name"
+[master fdb850f] replace to with my name
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shivamchaudhary-codeon/zemoso-training.git
+   15e3e62..fdb850f  master -> master
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git log --oneline
+fdb850f (HEAD -> master, origin/master) replace to with my name
+15e3e62 file is added
+
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git revert fdb850f
+[master 55f3dfe] Revert "replace to with my name"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git log --oneline
+55f3dfe (HEAD -> master) Revert "replace to with my name"
+fdb850f (origin/master) replace to with my name
+15e3e62 file is added
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git branch new_branch
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ ls
+hello_world.txt
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (master)
+$ git switch new_branch
+Switched to branch 'new_branch'
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (new_branch)
+$ git status
+On branch new_branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (new_branch)
+$ git add .
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (new_branch)
+$ git commit -m "change Torvalds with my name in new_branch"
+[new_branch 56684f4] change Torvalds with my name in new_branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (new_branch)
+$ git push origin new_branch
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 668 bytes | 668.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'new_branch' on GitHub by visiting:
+remote:      https://github.com/shivamchaudhary-codeon/zemoso-training/pull/new/new_branch
+remote:
+To https://github.com/shivamchaudhary-codeon/zemoso-training.git
+ * [new branch]      new_branch -> new_branch
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (new_branch)
+$
