@@ -136,3 +136,65 @@ To https://github.com/shivamchaudhary-codeon/zemoso-training.git
 
 SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/first_git_repo (new_branch)
 $
+
+/////////////////////////////clone the main git repo///////////////////////////////
+
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/git_clone_repo (master)
+$ git clone https://github.com/shivamchaudhary-codeon/zemoso-training.git
+Cloning into 'zemoso-training'...
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 13 (delta 5), reused 10 (delta 2), pack-reused 0
+Receiving objects: 100% (13/13), done.
+Resolving deltas: 100% (5/5), done.
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/git_clone_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        zemoso-training/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/git_clone_repo (master)
+$ git add .
+warning: adding embedded git repository: zemoso-training
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> zemoso-training
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached zemoso-training
+hint:
+hint: See "git help submodule" for more information.
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/git_clone_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   zemoso-training
+
+git
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/git_clone_repo (master)
+$ git commit -m "clone the main"
+[master (root-commit) 47386b2] clone the main
+ 1 file changed, 1 insertion(+)
+ create mode 160000 zemoso-training
+
+SHIVAM CHAUDHARY@Shivam MINGW64 /d/zemoso technologies/git_clone_repo (master)
+$
